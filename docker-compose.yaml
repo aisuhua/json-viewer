@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  index:
+    image: nginx:1.22
+    restart: always
+    ports: 
+      - 8082:80
+    volumes:
+      - ./default.conf:/etc/nginx/http.d/default.conf
+      - ./build:/usr/share/nginx/html
